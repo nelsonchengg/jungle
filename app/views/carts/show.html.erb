@@ -5,10 +5,9 @@
   </header>
 
   <% if enhanced_cart.empty? %>
-  <p>Your cart is empty.</p>
-  <%= link_to "Continue shopping", root_path %>
+    <p>Your cart is empty.</p>
+    <%= link_to "Continue shopping", root_path %>
   <% else %>
-
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -53,5 +52,5 @@
       <% end %>
     </div>
   </div>
-
+  <% end %>
 </section>
