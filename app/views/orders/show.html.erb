@@ -28,11 +28,17 @@
             <br>
             <%= line_item.product.description %>
           </td>
-          <td><%= humanized_money_with_symbol line_item.item_price_cents / 100.0 %></td>
-          <td><%= line_item.quantity %></td>
-          <td><%= humanized_money_with_symbol line_item.total_price_cents / 100.0 %></td>
+          <td>
+            <%= humanized_money_with_symbol line_item.item_price_cents / 100.0 %>
+          </td>
+          <td>
+            <%= line_item.quantity %>
+          </td>
+          <td>
+            <%= humanized_money_with_symbol line_item.total_price_cents / 100.0 %>
+          </td>
           </tr>
-          <% end %>
+        <% end %>
       </tbody>
       <tfoot>
         <tr>
