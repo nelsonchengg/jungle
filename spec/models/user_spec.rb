@@ -40,6 +40,28 @@ RSpec.describe User, type: :model do
   end
 
   describe '.authenticate_with_credentials' do
-    # examples for this class method here
+    before do
+      @user = User.create(first_name: "Bobby", last_name: "Lee", email: "test@test.com", password: "password", password_confirmation: "password")
+    end
+    
+    it 'should authenticate a user with valid credentials' do
+      expect(User.authenticate_with_credentials("test@test.com", "password")).to eq(@user)
+    end
+    
+    it 'should authenticate a user with extra spaces in the email address' do
+      expect(User.authenticate_with_credentials(" test@test.com ", "password")).to eq(@user)
+    end
+    
+    it 'should authenticate a user with different casing in the email address' do
+      expect(User.authenticate_with_credentials("TEST@TEST.COM", "password")).to eq(@user)
+    end
+    
+    it 'should not authenticate a user with invalid credentials' do
+      expect(User.authenticate_with_credentials("test@test.com", "password123")).to be nil
+    end
+    
+    it 'should not authenticate a user with a non-existent email' do
+      expect(User.authenticate_with_credentials( "nonexitent@test.com", "password")).to be nil
+    end
   end
 end
