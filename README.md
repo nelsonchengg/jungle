@@ -32,10 +32,10 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Screenshots
 
-!["Home Page"]()
+!["Logo"](https://github.com/nelsonchengg/jungle/blob/master/docs/Logo.png?raw=true)
 
-!["Edit Component"]()
+!["Product Show"](https://github.com/nelsonchengg/jungle/blob/master/docs/Products.png?raw=true)
 
-!["Error Component"]()
+!["Product Added to Cart"](https://github.com/nelsonchengg/jungle/blob/master/docs/Cart%20with%20item.png?raw=true)
 
-!["Saving Icon"]()
+!["Product Purchased"](https://github.com/nelsonchengg/jungle/blob/master/docs/Paid.png?raw=true)
